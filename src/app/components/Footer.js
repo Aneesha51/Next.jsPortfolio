@@ -9,7 +9,7 @@ const Footer = () => {
             <div className=''>
                <div className='flex justify-between items-center px-18 py-10'>
                     <div className='text-5xl font-semibold  bg-gradient-to-r from-indigo-400 to-cyan-400 text-transparent bg-clip-text '>
-                        Let's 
+                        Let&apos;s
                         <br />
                         Work Together -
                     </div>
