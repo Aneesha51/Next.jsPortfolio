@@ -36,11 +36,11 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <a href="#">Projects</a>
+                            <a href="#projects">Projects</a>
                         </li>
                         
                         <li>
-                            <a href="#">Resume</a>
+                            <a href="https://www.dropbox.com/scl/fi/eztdjg9tla57oupzlayvg/Aneesha_Rangan_Developer.pdf?rlkey=e4dpzzuvkui3dl0yjfu0geg7c&st=nlck90w7&dl=0" target='_blank'>Resume</a>
                         </li>
                     </ul>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
 
                 <div>
                     <button className='w-[120px] h-[40px] border rounded-lg font-medium text-gray-700 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-cyan-400 hover:text-white transition'>
-                        <a href='#' >Contact</a>
+                        <a href='#contact'  >Contact</a>
                     </button>
                 </div>
             </div>

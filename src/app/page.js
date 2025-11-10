@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Profile from "../../public/profile.png";
 import { Code, Smartphone, Rocket, Users } from "lucide-react";
+import projects from "./data/projects";
 
 export default function Home() {
   const router = useRouter();
@@ -30,35 +31,13 @@ export default function Home() {
     },
   ];
 
-  const projects = [
-    {
-      title: "Goomi Driver Delivery App",
-      desc: "A responsive personal portfolio built with Next.js, Tailwind CSS, and shadcn/ui components.",
-      tech: "Next.js, Expo, Firebase, Firestore",
-      link: "https://github.com/yourusername/portfolio",
-      image:"/Logo.jpeg"
-    },
-    {
-      title: "Task Manager App",
-      desc: "Cross-platform mobile app for task management with Firebase authentication and real-time sync.",
-      tech: "React Native, Expo, Firebase",
-      link: "https://github.com/yourusername/task-manager",
-      image:""
-    },
-    {
-      title: "E-Commerce Backend",
-      desc: "Backend service for an e-commerce platform with user authentication, order processing, and database management.",
-      tech: "Java, Spring Boot, SQL",
-      link: "https://github.com/yourusername/ecommerce-backend",
-      image:""
-    },
-  ];
+ 
 
 
   return (
     <main>
       {/* Hero Section */}
-      <div id="home" className="flex items-center justify-center min-h-screen px-5">
+      <div id="home" className="flex items-center justify-center py-20 px-5">
         <div className="w-full max-w-xl text-center space-y-5">
           {/* Profile Image */}
           <div className="flex justify-center">
@@ -89,7 +68,7 @@ export default function Home() {
 
           {/* Contact Button */}
           <button
-            onClick={() => router.push("/contact")}
+            onClick={() => router.push("#contact")}
             className="px-6 py-2 border rounded-full font-medium text-gray-700 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-cyan-400 hover:text-white transition"
           >
             Contact Me
@@ -162,28 +141,28 @@ export default function Home() {
       </div>
 
 
-       <section className="max-w-6xl mx-auto px-6 py-12">
+       <section className="max-w-6xl mx-auto px-6 py-12" id="projects">
       <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-indigo-400 to-cyan-400 text-transparent bg-clip-text">
         Projects
       </h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <div key={index} className="shadow-md hover:shadow-lg transition rounded-2xl">
+        {projects.map((projects, idx) => (
+          <div key={idx} className="shadow-md hover:shadow-lg transition rounded-2xl">
             <div className="h-48 w-full relative">
               <Image
-                src={project.image || Profile}
-                alt={project.title}
+                src={projects.image || Profile}
+                alt={projects.title}
                 layout="fill"
                 objectFit="fit"
                 className="rounded-t-2xl"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-3">{project.desc}</p>
-              <p className="text-sm text-gray-500 mb-4">⚡ {project.tech}</p>
+              <h3 className="text-xl font-semibold mb-2">{projects.title}</h3>
+              <p className="text-gray-600 mb-3">{projects.desc}</p>
+              <p className="text-sm text-gray-500 mb-4">⚡ {projects.tech}</p>
               <button asChild variant="outline" className="rounded-full">
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <a href={projects.link} target="_blank" rel="noopener noreferrer">
                   View Project
                 </a>
               </button>
@@ -202,9 +181,60 @@ export default function Home() {
     </section>
 
 
-    <section>
+    <section className="max-w-6xl mx-auto px-6 py-12" id="contact">
       <div>
-        
+        <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-indigo-400 to-cyan-400 text-transparent bg-clip-text">
+        Get In Touch
+        </h2>
+      </div>
+
+      <div className="flex justify-center">
+        {/* Form */}
+        <form className="w-2/3 space-y-6 ">
+          {/* Name */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="example@gmail.com"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          {/* Message */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Message
+            </label>
+            <textarea
+              rows="5"
+              placeholder="Write your message..."
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+          </div>
+
+          {/* Button */}
+          <button
+            type="submit"
+            className="w-full border font-medium py-3 rounded-lg  text-gray-700 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-cyan-400 hover:text-white transition"
+          >
+            Get in Touch
+          </button>
+        </form>
       </div>
     </section>
     </main>
