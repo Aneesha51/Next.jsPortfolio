@@ -150,18 +150,18 @@ export default function Home() {
           <div key={idx} className="shadow-md hover:shadow-lg transition rounded-2xl">
             <div className="h-48 w-full relative">
               <Image
-                src={projects.image || Profile}
-                alt={projects.title}
-                layout="fill"
-                objectFit="fit"
-                className="rounded-t-2xl"
+              src={projects.image || Profile}
+              alt={projects.title}
+              fill
+              style={{ objectFit: "fill" }}
+              className="rounded-t-2xl"
               />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{projects.title}</h3>
               <p className="text-gray-600 mb-3">{projects.desc}</p>
               <p className="text-sm text-gray-500 mb-4">⚡ {projects.tech}</p>
-              <button asChild variant="outline" className="rounded-full">
+              <button variant="outline" className="rounded-full">
                 <a href={projects.link} target="_blank" rel="noopener noreferrer">
                   View Project
                 </a>

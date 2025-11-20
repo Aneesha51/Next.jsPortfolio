@@ -31,7 +31,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-[#484E53] gap-4">
           <div className="text-center sm:text-left">
-            <p>© 2023 Aneesha Ashwari Rangan. All rights reserved.</p>
+            <p>© 2025 Aneesha Ashwari Rangan. All rights reserved.</p>
           </div>
 
           <div className="flex items-center gap-3">
