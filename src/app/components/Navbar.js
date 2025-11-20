@@ -90,51 +90,74 @@ const Navbar = () => {
             </div>
         </div>
 
-        {/* Mobile menu (slides down) */}
-      {open && (
-        <div className="md:hidden bg-[#E0E8F6] border-t shadow-md">
-          <div className="px-5 py-4 space-y-3">
-            <Link href="#home">
-              <li onClick={() => setOpen(false)} className="block text-base font-medium">
-                Home
-              </li>
-            </Link>
+  {/* Mobile menu (slides down) */}
+{open && (
+  <div className="md:hidden bg-[#E0E8F6] border-t shadow-md">
+    <ul className="px-5 py-4 space-y-3">
+      <li>
+        <Link
+          href="#home"
+          onClick={() => setOpen(false)}
+          className="block text-base font-medium"
+        >
+          Home
+        </Link>
+      </li>
 
-            <Link href="#about">
-              <li onClick={() => setOpen(false)} className="block text-base font-medium">
-                About
-              </li>
-            </Link>
+      <li>
+        <Link
+          href="#about"
+          onClick={() => setOpen(false)}
+          className="block text-base font-medium"
+        >
+          About
+        </Link>
+      </li>
 
-            <li href="#service" onClick={() => setOpen(false)} className="block text-base font-medium">
-              Services
-            </li>
+      <li>
+        <Link
+          href="#service"
+          onClick={() => setOpen(false)}
+          className="block text-base font-medium"
+        >
+          Services
+        </Link>
+      </li>
 
-            <li href="#projects" onClick={() => setOpen(false)} className="block text-base font-medium">
-              Projects
-            </li>
+      <li>
+        <Link
+          href="#projects"
+          onClick={() => setOpen(false)}
+          className="block text-base font-medium"
+        >
+          Projects
+        </Link>
+      </li>
 
-            <li
-              href="https://www.dropbox.com/scl/fi/eztdjg9tla57oupzlayvg/Aneesha_Rangan_Developer.pdf?rlkey=e4dpzzuvkui3dl0yjfu0geg7c&st=nlck90w7&dl=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-base font-medium"
-            >
-              Resume
-            </li>
+      <li>
+        <a
+          href="https://www.dropbox.com/scl/fi/eztdjg9tla57oupzlayvg/Aneesha_Rangan_Developer.pdf?rlkey=e4dpzzuvkui3dl0yjfu0geg7c&st=nlck90w7&dl=0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-base font-medium"
+        >
+          Resume
+        </a>
+      </li>
 
-            <div className="pt-2">
-              <li
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="inline-block w-full text-center border rounded-lg px-4 py-2 font-medium text-gray-700 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-cyan-400 hover:text-white transition"
-              >
-                Contact
-              </li>
-            </div>
-          </div>
-        </div>
-      )}
+      <li className="pt-2">
+        <Link
+          href="#contact"
+          onClick={() => setOpen(false)}
+          className="inline-block w-full text-center border rounded-lg px-4 py-2 font-medium text-gray-700 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-cyan-400 hover:text-white transition"
+        >
+          Contact
+        </Link>
+      </li>
+    </ul>
+  </div>
+)}
+
     </nav>
   )
 }
