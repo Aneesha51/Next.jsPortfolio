@@ -136,7 +136,7 @@ const Navbar = () => {
 
       <li>
         <a
-          href="https://www.dropbox.com/scl/fi/eztdjg9tla57oupzlayvg/Aneesha_Rangan_Developer.pdf?rlkey=e4dpzzuvkui3dl0yjfu0geg7c&st=nlck90w7&dl=0"
+          href="https://www.dropbox.com/scl/fi/lu6y6ikumqbox5y1w8rrs/Aneesha_Rangan-CV.pdf?rlkey=vhgnb2xilx0vv1w7311r3o0ra&st=yxx5ii6v&dl=0"
           target="_blank"
           rel="noopener noreferrer"
           className="block text-base font-medium"
